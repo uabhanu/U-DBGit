@@ -66,7 +66,7 @@ public class ItemGroundScript : NetworkBehaviour {
 			break;
 		}
 
-		Transform nameObjectTransform = transform.FindChild ("Name");
+		Transform nameObjectTransform = transform.Find ("Name");
 		if(nameObjectTransform == null) {
 			Debug.Log (transform.gameObject.name + " has no child object named 'Name'");
 			return;
@@ -74,7 +74,7 @@ public class ItemGroundScript : NetworkBehaviour {
 		TextMesh txt = nameObjectTransform.gameObject.GetComponent<TextMesh> ();
 
 		if (txt != null) {
-			transform.FindChild ("Name").gameObject.GetComponent<TextMesh> ().color = color;
+			transform.Find ("Name").gameObject.GetComponent<TextMesh> ().color = color;
 		} else {
 			Debug.Log ("txt is null");
 		}
