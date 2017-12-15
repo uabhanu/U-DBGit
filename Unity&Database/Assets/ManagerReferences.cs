@@ -96,7 +96,7 @@ public class ManagerReferences : NetworkBehaviour
 		string imageSlotString = groundScript.NameOfSlotImage;
 
 		GameObject imageSlotHead = Instantiate (Resources.Load (imageSlotString)) as GameObject;
-		imageSlotHead.transform.parent = panelEquippedItems.transform.FindChild (slotName);
+		imageSlotHead.transform.parent = panelEquippedItems.transform.Find (slotName);
 
 		ItemAttributes itemAttributes = objectOnGround.GetComponent<ItemAttributes> ();
 		ItemAttributes attributesForImageSlot = imageSlotHead.AddComponent<ItemAttributes> ();
@@ -140,7 +140,7 @@ public class ManagerReferences : NetworkBehaviour
 		form.AddField ("userId", user.id);
 
 		// HEAD
-		GameObject slotHead = panelEquippedItems.transform.FindChild ("ItemSlotHead").gameObject;
+		GameObject slotHead = panelEquippedItems.transform.Find ("ItemSlotHead").gameObject;
 		string pathHead = "";
 		if (slotHead != null) {
 			if (slotHead.transform.childCount > 0) {
@@ -151,7 +151,7 @@ public class ManagerReferences : NetworkBehaviour
 		form.AddField ("head", pathHead);
 
 		// RIGHT HAND
-		GameObject slotRightHand = panelEquippedItems.transform.FindChild ("ItemSlotRightHand").gameObject;
+		GameObject slotRightHand = panelEquippedItems.transform.Find ("ItemSlotRightHand").gameObject;
 		string pathRightHand = "";
 		if (slotRightHand != null) {
 			if (slotRightHand.transform.childCount > 0) {
@@ -162,7 +162,7 @@ public class ManagerReferences : NetworkBehaviour
 		form.AddField ("rightHand", pathRightHand);
 
 		// LEFT HAND
-		GameObject slotLeftHand = panelEquippedItems.transform.FindChild ("ItemSlotLeftHand").gameObject;
+		GameObject slotLeftHand = panelEquippedItems.transform.Find ("ItemSlotLeftHand").gameObject;
 		string pathLeftHand = "";
 		if (slotLeftHand != null) {
 			if (slotLeftHand.transform.childCount > 0) {
@@ -175,7 +175,7 @@ public class ManagerReferences : NetworkBehaviour
 
 
 		// SHOULDER PADS
-		GameObject slotShoulders = panelEquippedItems.transform.FindChild ("ItemSlotShoulders").gameObject;
+		GameObject slotShoulders = panelEquippedItems.transform.Find ("ItemSlotShoulders").gameObject;
 		string pathShoulders = "";
 		if (slotShoulders != null) {
 			if (slotShoulders.transform.childCount > 0) {
@@ -206,7 +206,7 @@ public class ManagerReferences : NetworkBehaviour
 		string imageSlotString = groundScript.NameOfSlotImage;
 
 		GameObject imageSlotHead = Instantiate (Resources.Load (imageSlotString)) as GameObject;
-		imageSlotHead.transform.parent = panelEquippedItems.transform.FindChild (slotName);
+		imageSlotHead.transform.parent = panelEquippedItems.transform.Find (slotName);
 
 		ItemAttributes itemAttributes = objectOnGround.GetComponent<ItemAttributes> ();
 		ItemAttributes attributesForImageSlot = imageSlotHead.AddComponent<ItemAttributes> ();
@@ -243,7 +243,7 @@ public class ManagerReferences : NetworkBehaviour
 		form.AddField ("userId", user.id);
 
 		// slot 1
-		GameObject slot1 = panelEquippedItems.transform.FindChild ("ItemSlot1").gameObject;
+		GameObject slot1 = panelEquippedItems.transform.Find ("ItemSlot1").gameObject;
 		string path1 = "";
 		if (slot1 != null) {
 			if (slot1.transform.childCount > 0) {
@@ -254,7 +254,7 @@ public class ManagerReferences : NetworkBehaviour
 		form.AddField ("slot1", path1);
 
 		// slot 2
-		GameObject slot2 = panelEquippedItems.transform.FindChild ("ItemSlot2").gameObject;
+		GameObject slot2 = panelEquippedItems.transform.Find ("ItemSlot2").gameObject;
 		string path2 = "";
 		if (slot2 != null) {
 			if (slot2.transform.childCount > 0) {
@@ -265,7 +265,7 @@ public class ManagerReferences : NetworkBehaviour
 		form.AddField ("slot2", path2);
 
 		// slot 3
-		GameObject slot3 = panelEquippedItems.transform.FindChild ("ItemSlot3").gameObject;
+		GameObject slot3 = panelEquippedItems.transform.Find ("ItemSlot3").gameObject;
 		string path3 = "";
 		if (slot3 != null) {
 			if (slot3.transform.childCount > 0) {
@@ -277,7 +277,7 @@ public class ManagerReferences : NetworkBehaviour
 
 
 		// slot 4
-		GameObject slot4 = panelEquippedItems.transform.FindChild ("ItemSlot4").gameObject;
+		GameObject slot4 = panelEquippedItems.transform.Find ("ItemSlot4").gameObject;
 		string path4 = "";
 		if (slot4 != null) {
 			if (slot4.transform.childCount > 0) {
@@ -289,7 +289,7 @@ public class ManagerReferences : NetworkBehaviour
 
 
 		// slot 5
-		GameObject slot5 = panelEquippedItems.transform.FindChild ("ItemSlot5").gameObject;
+		GameObject slot5 = panelEquippedItems.transform.Find ("ItemSlot5").gameObject;
 		string path5 = "";
 		if (slot5 != null) {
 			if (slot5.transform.childCount > 0) {
@@ -301,7 +301,7 @@ public class ManagerReferences : NetworkBehaviour
 
 
 		// slot 6
-		GameObject slot6 = panelEquippedItems.transform.FindChild ("ItemSlot6").gameObject;
+		GameObject slot6 = panelEquippedItems.transform.Find ("ItemSlot6").gameObject;
 		string path6 = "";
 		if (slot6 != null) {
 			if (slot6.transform.childCount > 0) {
