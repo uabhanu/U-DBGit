@@ -1,6 +1,4 @@
-﻿// Upgrade NOTE: replaced 'mul(UNITY_MATRIX_MVP,*)' with 'UnityObjectToClipPos(*)'
-
-Shader "Custom/AdditiveTintable"
+﻿Shader "Custom/AdditiveTintable"
 {
 	Properties
 	{
@@ -61,7 +59,7 @@ Shader "Custom/AdditiveTintable"
             v2f vert(appdata_t v)
             {
                 v2f o;
-                o.pos = UnityObjectToClipPos(v.vertex);
+                o.pos = mul(UNITY_MATRIX_MVP, v.vertex);
 				o.texcoord = v.texcoord;
                 o.color = (v.color * _TintColor);
 

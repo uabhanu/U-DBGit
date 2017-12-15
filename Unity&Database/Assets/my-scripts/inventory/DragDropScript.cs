@@ -9,6 +9,7 @@ public class DragDropScript : NetworkBehaviour, IBeginDragHandler, IDragHandler,
 	public ItemType itemType;
 	public string pathOfItemToEquip;
 	public string pathOfItemToEquip2;
+	public string pathToGroundItem;
 
 	public static GameObject statsItemUI;
 	public float statsItemUIOffsetY = 60;

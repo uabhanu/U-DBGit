@@ -41,6 +41,8 @@ public class BackpackManager : NetworkBehaviour {
 			return true;
 		}
 
+		ManagerReferences refs = GameObject.Find ("Manager").GetComponent<ManagerReferences> ();
+		refs.RequestStorePlayerBackpack ();
 		// todo: we may want a message to say the backpacs is FULL
 		return false;
 	}

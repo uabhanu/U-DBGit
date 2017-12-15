@@ -21,7 +21,6 @@ public class NetworkManagerMainMenu : NetworkBehaviour {
 		NetworkManager.singleton.networkAddress = serverIPAddress;
 		NetworkLobbyManager.singleton.StartClient ();
 
-
 		GameObject.Find ("Manager").GetComponent<ManagerReferences> ().mainMenu.SetActive (false);
 		GameObject.Find ("Manager").GetComponent<ManagerReferences> ().buttonDisconnect.SetActive (true);
 	}
@@ -47,4 +46,5 @@ public class NetworkManagerMainMenu : NetworkBehaviour {
 	public bool isMainServer() {
 		return SystemInfo.graphicsDeviceType == UnityEngine.Rendering.GraphicsDeviceType.Null;
 	}
+		
 }

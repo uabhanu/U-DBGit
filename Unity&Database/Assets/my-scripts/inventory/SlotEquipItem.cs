@@ -21,6 +21,8 @@ public class SlotEquipItem : MonoBehaviour {
 		getLocalPlayer ();
 		string itemPath = DragDropScript.draggedItem.GetComponent<DragDropScript>().pathOfItemToEquip;
 		player.GetComponent<EquipItemScript> ().CmdEquipItemOnHead (itemPath, player.name, GetAttributesFromItemImage() );
+
+		GameObject.Find ("Manager").GetComponent<ManagerReferences> ().RequestStorePlayerGear ();
 	}
 
 	public void EquipItemOnShoulders(){
@@ -31,6 +33,8 @@ public class SlotEquipItem : MonoBehaviour {
 
 		string itemPath2 = DragDropScript.draggedItem.GetComponent<DragDropScript>().pathOfItemToEquip2;
 		player.GetComponent<EquipItemScript> ().CmdEquipRightShoulderWith (itemPath, player.name, GetAttributesFromItemImage() );
+
+		GameObject.Find ("Manager").GetComponent<ManagerReferences> ().RequestStorePlayerGear ();
 	}
 
 	public void EquipWeapon(ItemType itemType){
@@ -39,12 +43,15 @@ public class SlotEquipItem : MonoBehaviour {
 		player.GetComponent<EquipItemScript> ().CmdEquipItemOnRightHand (itemPath, player.name, GetAttributesFromItemImage() );
 		player.GetComponent<EquipItemScript> ().currentWeaponType = itemType;
 
+		GameObject.Find ("Manager").GetComponent<ManagerReferences> ().RequestStorePlayerGear ();
 	}
 
 	public void EquipShield(){
 		getLocalPlayer ();
 		string itemPath = DragDropScript.draggedItem.GetComponent<DragDropScript>().pathOfItemToEquip;
 		player.GetComponent<EquipItemScript> ().CmdEquipItemOnLeftHand (itemPath, player.name, GetAttributesFromItemImage() );
+	
+		GameObject.Find ("Manager").GetComponent<ManagerReferences> ().RequestStorePlayerGear ();
 	}
 
 	public void EquipBuckle(){

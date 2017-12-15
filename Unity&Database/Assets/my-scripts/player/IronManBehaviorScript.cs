@@ -3,7 +3,7 @@ using System.Collections;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
-using UnityEngine.Advertisements;
+//using UnityEngine.Advertisements;
 using UnityEngine.Networking;
 
 public class IronManBehaviorScript : NetworkBehaviour {
@@ -132,7 +132,7 @@ public class IronManBehaviorScript : NetworkBehaviour {
 	}
 
 	void AdsSetup(){
-		Advertisement.Initialize ("1041425", true);
+		//Advertisement.Initialize ("1041425", true);
 	}
 
 	void InitializeCostume(){
