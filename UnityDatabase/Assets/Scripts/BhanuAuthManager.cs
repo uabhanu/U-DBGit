@@ -29,14 +29,14 @@ public class BhanuAuthManager : MonoBehaviour
 
 		if(string.IsNullOrEmpty(www.error)) 
 		{
-			if(www.text.ToLower().Contains("invalid email or password"))
+			if(www.text.Contains("invalid email or password"))
 			{
-				m_messageToUser.text = "Invalid Username And/Or Password";
+				m_messageToUser.text = "Invalid Username And/Or Password :(";
 				m_messageToUser.color = Color.red;
 			}
 			else
 			{
-				m_messageToUser.text = "Sign In Successful";
+				m_messageToUser.text = "Sign In Successful :)";
 				m_messageToUser.color = Color.green;
 			}
 		} 
