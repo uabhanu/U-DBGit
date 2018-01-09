@@ -34,7 +34,8 @@ public class BhanuAuthManager : MonoBehaviour
 				m_messageToUser.text = "Invalid Username And/Or Password :(";
 				m_messageToUser.color = Color.red;
 			}
-			else
+
+			else if(www.text.Contains("No Errors"))
 			{
 				m_messageToUser.text = "Sign In Successful :)";
 				m_messageToUser.color = Color.green;
